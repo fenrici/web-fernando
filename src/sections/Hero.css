@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+.hero {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  background: url('../assets/hero-fer.jpeg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(26, 35, 126, 0.60), rgba(13, 71, 161, 0.60));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.13) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 3px 3px 12px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.hero-content h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: #ffe082;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.18);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.45);
+}
+
+.hero-content .subtitle {
+  font-size: 1.2rem;
+  color: #90caf9;
+  margin-top: 1rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.45);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0.5rem;
+    background-position: center top;
+  }
+  .hero-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .hero-content h1 {
+    font-size: 1.3rem;
+    word-break: break-word;
+  }
+  .hero-content h2 {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+  .hero-content p {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+  .hero-content .subtitle {
+    font-size: 0.92rem;
+  }
+} 
